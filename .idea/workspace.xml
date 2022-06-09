@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="e54cbf0e-9690-4bd6-aa2d-f57ab68086bc" name="Changes" comment="" />
-=======
     <list default="true" id="4c0226e8-5d5b-4b03-8f27-7e60b2fee645" name="Changes" comment="" />
->>>>>>> 5f55d7e3ebdc481cc074449e3ed81e56471e774e
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-<<<<<<< HEAD
-=======
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -23,7 +17,6 @@
       </list>
     </option>
   </component>
->>>>>>> 5f55d7e3ebdc481cc074449e3ed81e56471e774e
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -34,11 +27,7 @@
       </MavenGeneralSettings>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="2ALESCfLYi1BWF5mAAAH70fKfbJ" />
-=======
   <component name="ProjectId" id="2ALEQ4GDpJxbVoa5DxceJTr6DAY" />
->>>>>>> 5f55d7e3ebdc481cc074449e3ed81e56471e774e
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,11 +35,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-<<<<<<< HEAD
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../caitlin-barbour-student-code/module-1/17_File_IO_Writing/lecture-final" />
->>>>>>> 5f55d7e3ebdc481cc074449e3ed81e56471e774e
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ruina-kang-student-code/module-1/18_Review" />
   </component>
   <component name="RunManager">
     <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -75,19 +60,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-      <changelist id="e54cbf0e-9690-4bd6-aa2d-f57ab68086bc" name="Changes" comment="" />
-      <created>1654780462694</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1654780462694</updated>
-=======
       <changelist id="4c0226e8-5d5b-4b03-8f27-7e60b2fee645" name="Changes" comment="" />
       <created>1654780446934</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654780446934</updated>
->>>>>>> 5f55d7e3ebdc481cc074449e3ed81e56471e774e
     </task>
     <servers />
   </component>
