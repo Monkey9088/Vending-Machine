@@ -1,6 +1,9 @@
 package com.techelevator;
 
+import com.techelevator.view.Chips;
 import com.techelevator.view.Menu;
+
+import java.math.BigDecimal;
 
 public class VendingMachineCLI {
 
@@ -31,4 +34,5 @@ public class VendingMachineCLI {
 		VendingMachineCLI cli = new VendingMachineCLI(menu);
 		cli.run();
 	}
+
 }
