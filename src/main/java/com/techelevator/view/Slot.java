@@ -1,8 +1,12 @@
 package com.techelevator.view;
 
-public class Slot {
+import java.math.BigDecimal;
+
+public class Slot implements Itemable{
     //Attributes
     private String slotNumber;
+    private String itemInResidence;
+    private BigDecimal itemInResidencePrice;
     private int maxCapacity = 5;
     private int currentNumberOfItems;
     private boolean full;
@@ -10,10 +14,22 @@ public class Slot {
     private boolean partiallyStocked;
 
     //Constructors
+    public Slot(String slotNumber, String itemInResidence, BigDecimal itemInResidencePrice, int currentNumberOfItems) {
+        this.slotNumber = slotNumber;
+        this.itemInResidence = itemInResidence;
+        this.itemInResidencePrice = itemInResidencePrice;
+        this.currentNumberOfItems = currentNumberOfItems;
+    }
 
     //Getters
     public String getSlotNumber() {
         return slotNumber;
+    }
+    public String getItemInResidence() {
+        return itemInResidence;
+    }
+    public BigDecimal getItemInResidencePrice() {
+        return itemInResidencePrice;
     }
     public boolean isFull() {
         return full;
@@ -34,4 +50,16 @@ public class Slot {
     }
 
     //Methods
+    public String getName(VendingMachineItem item) {
+        if (slotNumber.equals(item.getSlotNumber())) {
+            return item.getName();
+        }
+        return item.getName();
+    }
+    public BigDecimal getPrice(VendingMachineItem item) {
+        if (slotNumber.equals(item.getSlotNumber())) {
+            return item.getPrice();
+        }
+        return item.getPrice();
+    }
 }
