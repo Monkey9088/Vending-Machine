@@ -2,11 +2,12 @@ package com.techelevator.view;
 
 import java.math.BigDecimal;
 
-public class Slot implements Itemable{
+public class Slot {
     //Attributes
     private String slotNumber;
-    private String itemInResidence;
-    private BigDecimal itemInResidencePrice;
+//    private String itemInResidence;
+//    private BigDecimal itemInResidencePrice;
+    private VendingMachineItem item;
     private int maxCapacity = 5;
     private int currentNumberOfItems;
     private boolean full;
@@ -14,10 +15,9 @@ public class Slot implements Itemable{
     private boolean partiallyStocked;
 
     //Constructors
-    public Slot(String slotNumber, String itemInResidence, BigDecimal itemInResidencePrice, int currentNumberOfItems) {
+    public Slot(String slotNumber, VendingMachineItem item, int currentNumberOfItems) {
         this.slotNumber = slotNumber;
-        this.itemInResidence = itemInResidence;
-        this.itemInResidencePrice = itemInResidencePrice;
+        this.item = item;
         this.currentNumberOfItems = currentNumberOfItems;
     }
 
@@ -25,11 +25,8 @@ public class Slot implements Itemable{
     public String getSlotNumber() {
         return slotNumber;
     }
-    public String getItemInResidence() {
-        return itemInResidence;
-    }
-    public BigDecimal getItemInResidencePrice() {
-        return itemInResidencePrice;
+    public VendingMachineItem getItem() {
+        return item;
     }
     public boolean isFull() {
         return full;
@@ -50,16 +47,5 @@ public class Slot implements Itemable{
     }
 
     //Methods
-    public String getName(VendingMachineItem item) {
-        if (slotNumber.equals(item.getSlotNumber())) {
-            return item.getName();
-        }
-        return item.getName();
-    }
-    public BigDecimal getPrice(VendingMachineItem item) {
-        if (slotNumber.equals(item.getSlotNumber())) {
-            return item.getPrice();
-        }
-        return item.getPrice();
-    }
+
 }
