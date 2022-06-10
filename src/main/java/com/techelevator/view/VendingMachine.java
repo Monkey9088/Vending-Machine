@@ -14,11 +14,15 @@ public class VendingMachine {
     private BigDecimal balance = new BigDecimal("0.00");
     private List<VendingMachineItem> stock = new ArrayList<>();
     private List<Slot> slots = new ArrayList<>();
-
+    //private String inputFile;
+    //private String outputFile;
+   // private float feedMoney;
+    //private String selectedProductId;
 
     //Constructors
     //public VendingMachine ()
-
+      //feedMoney =0;
+     // readInputFile();
     //Getters
     public BigDecimal getBalance() {
         return balance;
