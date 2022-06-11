@@ -13,7 +13,7 @@ public class VendingMachine {
     private BigDecimal balance = new BigDecimal("0.00");
     private List<VendingMachineItem> stock = new ArrayList<>();
     private List<Slot> slots = new ArrayList<>();
-
+    private String outFile;
 
 
 
@@ -134,7 +134,10 @@ public class VendingMachine {
     //If Log.txt doesn't exist, create the file and write to it
     //Else Append Log.txt
     public void logTransactions(String log) {
-        String logPath = "Log.txt";
+        try{
+            File file = new File(logPath)
+        }
+        /*String logPath = "Log.txt";
         File transactions = new File(logPath);
 
         try (PrintWriter newWriter = new PrintWriter(transactions )) {
@@ -150,7 +153,7 @@ public class VendingMachine {
             System.out.println("File does not exists");;
         } catch (IOException ex) {
             System.out.println("Error occurred while creating the file");
-        }
+        }*/
     }
 
 
