@@ -12,7 +12,7 @@ public class VendingMachine {
     private BigDecimal balance = new BigDecimal("0.00");
     private List<VendingMachineItem> stock = new ArrayList<>();
     private List<Slot> slots = new ArrayList<>();
-    private Clock clock;
+
 
 
     //Constructors
@@ -160,7 +160,6 @@ public class VendingMachine {
         nickelCount = (int)(change / nickleValue);
         change = change - (nickleValue * nickelCount);
 
-        System.out.println(change % quarterValue);
 
 
 
