@@ -9,8 +9,9 @@ public class VendingMachineItem {
     private BigDecimal price = new BigDecimal("0.00");
     private String name;
     private String slotNumber;
-    //private String type;
-    //private int count;
+
+    private String type;
+
 
     //Getters
     public BigDecimal getPrice() {
@@ -22,7 +23,9 @@ public class VendingMachineItem {
     public String getSlotNumber() {
         return slotNumber;
     }
-    //public int getCount(){ return count;}
+    public String getType() {
+        return type;
+    }
 
 
     //Setters
@@ -31,17 +34,20 @@ public class VendingMachineItem {
     }
 
     //Constructors
-    public VendingMachineItem (String name, String slotNumber, BigDecimal price,String type;) {
+
+    public VendingMachineItem (String name, String type, String slotNumber, BigDecimal price) {
+
         this.name = name;
+        this.type = type;
         this.price = price;
         this.slotNumber = slotNumber;
         //this.type=type;
        // count =5;
     }
 
-    //Methods
-    protected String getMessage() {
-        return "Custom message";
-    }
+//    //Methods
+//    //protected String getMessage() {
+//        return "Custom message";
+//    }
 
 }
