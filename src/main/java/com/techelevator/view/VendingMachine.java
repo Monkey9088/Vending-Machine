@@ -7,18 +7,30 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class VendingMachine {
     //Attributes
     private BigDecimal balance = new BigDecimal("0.00");
     private List<VendingMachineItem> stock = new ArrayList<>();
     private List<Slot> slots = new ArrayList<>();
-    private String outFile;
+
+    private String logFile;
+
+
+
 
 
 
     //Constructors
-    //public VendingMachine ()
+    public VendingMachine (String logFile) {
+        this.logFile = logFile;
+    }
+
+
       //feedMoney =0;
      // readInputFile();
     //Getters
@@ -50,22 +62,7 @@ public class VendingMachine {
                 itemInfo = currentLine.split("\\|");
                 VendingMachineItem newItem = new VendingMachineItem(itemInfo[1], itemInfo[3], itemInfo[0], new BigDecimal(itemInfo[2]));
                 stock.add(newItem);
-//                if (itemInfo[3].equals("Chip")) {
-//                    Chips newChips = new VendingMachineItem(itemInfo[1], itemInfo[0], new BigDecimal(itemInfo[2]));
-//                    stock.add(newChips);
-//                }
-//                if (itemInfo[3].equals("Candy")) {
-//                    Candy newCandys = new Candy(itemInfo[1], itemInfo[0], new BigDecimal(itemInfo[2]));
-//                    stock.add(newCandys);
-//                }
-//                if (itemInfo[3].equals("Gum")) {
-//                    Gum newGums = new Gum(itemInfo[1], itemInfo[0], new BigDecimal(itemInfo[2]));
-//                    stock.add(newGums);
-//                }
-//                if (itemInfo[3].equals("Drink")) {
-//                    Drink newDrinks = new Drink(itemInfo[1], itemInfo[0], new BigDecimal(itemInfo[2]));
-//                    stock.add(newDrinks);
-//                }
+
 
             }
 
@@ -122,9 +119,11 @@ public class VendingMachine {
 
         nickelCount = (int)(change / nickleValue);
         change = change - (nickleValue * nickelCount);
+
         LocalDateTime time =  LocalDateTime.now();
         String logMessage = time + " GIVE CHANGE: $" + change + " " + "$" + 0.00;
         logTransactions(logMessage);
+
 
         System.out.println("Here's your change! $" + balance + ": " + quarterCount + " Quarters, " + dimeCount + " Dimes, " + nickelCount + " Nickles.");
         balance = new BigDecimal("0.00");
@@ -134,26 +133,52 @@ public class VendingMachine {
     //If Log.txt doesn't exist, create the file and write to it
     //Else Append Log.txt
     public void logTransactions(String log) {
+            FileWriter fw = null;
         try{
-            File file = new File(logPath)
+            File file = new File(logFile);
+            if(!file.exists()){
+                file.createNewFile();
+            }
+             fw = new FileWriter(file,true);
+            fw.write(log) ;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                fw.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         /*String logPath = "Log.txt";
         File transactions = new File(logPath);
 
-        try (PrintWriter newWriter = new PrintWriter(transactions )) {
+
+        File transactions = new File(logFile);
+
+
+
+
+        try (PrintWriter newWriter =new PrintWriter(transactions);){
             if (!transactions.exists()) {
                 transactions.createNewFile();
                 newWriter.println(log);
-            }else{
-                PrintWriter addWriter =new PrintWriter(new FileOutputStream(transactions,true));
+            } else {
+                PrintWriter addWriter = new PrintWriter(new FileOutputStream(log, true));
                 addWriter.println(log);
+
             }
 
-        }catch (FileNotFoundException ex) {
-            System.out.println("File does not exists");;
-        } catch (IOException ex) {
+
+        }catch(FileNotFoundException ex){
+            System.out.println("File does not exist");
+            ;
+        } catch(IOException ex){
             System.out.println("Error occurred while creating the file");
+
         }*/
+
+
     }
 
 

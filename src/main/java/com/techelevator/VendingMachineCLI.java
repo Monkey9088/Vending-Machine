@@ -16,6 +16,7 @@ public class VendingMachineCLI {
 	private static final String PURCHASE_MENU_FINISH_TRANSACTION = "Finish Transaction";
 	private static final String[] PURCHASE_MENU_OPTIONS = {PURCHASE_MENU_FEED_MONEY, PURCHASE_MENU_SELECT_PRODUCT, PURCHASE_MENU_FINISH_TRANSACTION};
 	private static final String[] MAIN_MENU_OPTIONS = { MAIN_MENU_OPTION_DISPLAY_ITEMS, MAIN_MENU_OPTION_PURCHASE, MAIN_MENU_OPTION_EXIT };
+	//VendingMachine vendingMachine = new VendingMachine("C:\\Users\\Student\\workspace\\nlr-8-module-1-capstone-orange-team-3\\src\\main\\resources\\Log.txt");
 
 	private Menu menu;
 
@@ -26,10 +27,11 @@ public class VendingMachineCLI {
 
 
 	public void run() {
-		VendingMachine vendingMachine = new VendingMachine();
+		VendingMachine vendingMachine = new VendingMachine("C:\\Users\\Student\\workspace\\nlr-8-module-1-capstone-orange-team-3\\src\\main\\resources\\Log.txt");
 		vendingMachine.machineStartUp();
 		Scanner sc = new Scanner(System.in);
 		while (true) {
+			vendingMachine.logTransactions("Start log:");
 			String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
 				String[] newArray = vendingMachine.printInventory();
