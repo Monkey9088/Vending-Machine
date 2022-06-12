@@ -31,7 +31,7 @@ public class VendingMachineCLI {
 		vendingMachine.machineStartUp();
 		Scanner sc = new Scanner(System.in);
 		while (true) {
-			vendingMachine.logTransactions("Start log:");
+
 			String choice = (String) menu.getChoiceFromOptions(MAIN_MENU_OPTIONS);
 			if (choice.equals(MAIN_MENU_OPTION_DISPLAY_ITEMS)) {
 				String[] newArray = vendingMachine.printInventory();

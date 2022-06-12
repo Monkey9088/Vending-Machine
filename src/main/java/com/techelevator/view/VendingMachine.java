@@ -87,10 +87,10 @@ public class VendingMachine {
         int index = 0;
         for (Slot slot : slots) {
             if (slot.getCurrentNumberOfItems() > 0) {
-                inventory[index] = slot.getSlotNumber() + " | " + slot.getItem().getName() + " | " + slot.getCurrentNumberOfItems();
+                inventory[index] = slot.getSlotNumber() + " | " + slot.getItem().getName() + " | " + slot.getCurrentNumberOfItems() + "| $" + slot.getItem().getPrice();
                 index++;
             } else {
-                inventory[index] = slot.getSlotNumber() + " | " + slot.getItem().getName() + " | SOLD OUT";
+                inventory[index] = slot.getSlotNumber() + " | " + slot.getItem().getName() +  " | $" + slot.getItem().getPrice()+ " | SOLD OUT";
                 index++;
             }
         }
@@ -121,7 +121,7 @@ public class VendingMachine {
         change = change - (nickleValue * nickelCount);
 
         LocalDateTime time =  LocalDateTime.now();
-        String logMessage = time + " GIVE CHANGE: $" + change + " " + "$" + 0.00;
+        String logMessage = time + " GIVE CHANGE: $" + balance + " " + "$" + 0.00;
         logTransactions(logMessage);
 
 
@@ -140,7 +140,7 @@ public class VendingMachine {
                 file.createNewFile();
             }
              fw = new FileWriter(file,true);
-            fw.write(log) ;
+            fw.write(log + "\r\n") ;
         } catch (IOException e) {
             e.printStackTrace();
         }finally{
