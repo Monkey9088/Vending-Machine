@@ -36,9 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../caitlin-barbour-student-code/module-1/17_File_IO_Writing/lecture-final" />
-
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ruina-kang-student-code/module-1/14_Unit_Testing/exercise" />
   </component>
   <component name="RunManager">
     <configuration name="VendingMachineCLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
